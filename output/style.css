@@ -1,0 +1,14 @@
+.jumbotron, .card-header{
+    background-color: darkblue;
+    color:white;
+}
+.employee-card{
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px grey;
+    margin:20px;
+}
+.card-header{
+    text-align:center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

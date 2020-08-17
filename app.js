@@ -10,7 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 const Employee = require("./lib/Employee");
-const render = require("./lib/htmlRenderer");
+
 let employees=[]
 
 const generalQuestions=[
@@ -97,7 +97,7 @@ inquirer.prompt(generalQuestions).then(answers => {
             if(office.addNext==="Yes"){
                 return addNewEmployee();
             }
-            return render.render(employees);
+            replaceHTML();
             });
             break;
         case "Engineer":
@@ -108,7 +108,7 @@ inquirer.prompt(generalQuestions).then(answers => {
             if(git.addNext==="Yes"){
                 return addNewEmployee();
             }
-            return render.render(employees);
+            replaceHTML();
             });
             break;
         case "Intern":
@@ -119,12 +119,18 @@ inquirer.prompt(generalQuestions).then(answers => {
             if(uni.addNext==="Yes"){
                 return addNewEmployee();
             }
-            return render.render(employees);
+            replaceHTML();
             });
             break;
     }
     
 });
+}
+function replaceHTML(){
+    fs.writeFile(outputPath, render(employees), (err) => {
+        if (err) throw err;
+        console.log("Done");
+      });
 }
 
 
