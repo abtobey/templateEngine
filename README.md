@@ -25,6 +25,9 @@ Enter the information for your team members. If you wish to keep entering inform
 
 [Demonstration](https://youtu.be/oyje6fn9--A)
 
+![Entering Info](https://user-images.githubusercontent.com/65990371/90452244-4e8f3f80-e0b3-11ea-8407-fb10a3543970.JPG)
+
+
 ---
 
 ## Contributing: 
@@ -35,11 +38,6 @@ email abtobey@gmail.com
 ## Tests:
 testing uses NPM jest package. Run npm install jest, and once that has downloaded, enter "npm run test".
 
----
-
-##License:
-
-This project is covered under the GNU General Public License license.
 
 ---
 
